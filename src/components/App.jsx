@@ -30,7 +30,7 @@ export const App = () => {
       return alert(`Number ${number} already exists in your contacts.`);
     }
 
-    setContacts([...contacts,  {
+    setContacts(prevContacts => [...prevContacts,  {
       id: nanoid(),
       name,
       number,
